@@ -51,7 +51,7 @@ tokenizer = AutoTokenizer.from_pretrained("./save/"+ model_name) #sp tokenizer ì
 """
 enc = tokenizer(response)["input_ids"] #sp tokenizer
 # enc = tokenizer.encode(response) #bw tokenizer
-l = len(response)
+l = len(enc)
 if l < 100 :
     pad = (100 - l) * [0] + enc
 else : pad = enc[l-100:]
