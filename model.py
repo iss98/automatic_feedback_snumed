@@ -1,6 +1,16 @@
 import torch
 import torch.nn as nn
 
+class cfg():
+    """
+    cfg.py 대신에 class로 지정
+    """
+    def __init__(self, vs, emb = 16, hidden = 32, nh = 4, device = "cpu"):
+        self.emb = emb
+        self.hidden = hidden
+        self.vs = vs
+        self.nh = nh
+        self.device = device
 
 class RNNModel(nn.Module):
     '''
