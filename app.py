@@ -55,7 +55,8 @@ l = len(response)
 if l < 100 :
     pad = (100 - l) * [0] + enc
 else : pad = enc[l-100:]
-pad_ten = torch.tensor(pad).reshape(1,max_len)
+pad_ten = torch.tensor(pad)
+pad_ten = pad_ten.reshape(1,max_len)
 y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
