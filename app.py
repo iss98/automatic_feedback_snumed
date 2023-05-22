@@ -10,11 +10,6 @@ import numpy as np
 관련된 함수 참고 : https://docs.streamlit.io/
 """
 
-st.set_page_config(
-  page_title = "2023_수교평_자동피드백",
-  layout = "wide",
-)
-
 st.title("자동 채점 모델 기반 자동 피드백")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 
