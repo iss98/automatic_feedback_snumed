@@ -119,7 +119,10 @@ st.divider()
 
 st.header("데이터 예시")
 st.write("데이터를 csv파일로 옮긴 예시")
-df = pd.read_csv("./save/3-3.csv")
+option = st.selectbox(
+    '문제 번호를 골라주세요',
+    ("1-8","3-3"))
+df = pd.read_csv("./save/"+option+".csv")
 df = df.dropna(subset = ["답안"])
 num_rows = len(df)
 st.write(f"응답을 한 학생 수 : {num_rows}, 총 학생 수 : 241")
