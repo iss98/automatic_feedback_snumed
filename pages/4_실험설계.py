@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title("실험 설계")
-st.divdier()
+st.divider()
 st.header("문항 설계 정리")
 st.write("각 문항에 들어간 지식요소 및 오개념의 개수를 정리하면 다음과 같다.")
 st.subheader("1")
@@ -56,7 +56,7 @@ styled_df3 = df3.style\
                                   ('background-color', 'lightblue')]}])
 st.table(styled_df3)
 
-st.divdier()
+st.divider()
 st.header("실험 설계")
 st.write("**대상 학년** : 중학교 2학년")
 st.write("**대상 학생** : 2개 학교 241명의 학생")

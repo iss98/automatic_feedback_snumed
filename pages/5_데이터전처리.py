@@ -110,12 +110,12 @@ code2 = '''\begin{document}
 \end{center}'''
 st.code(code2, language = 'latex')
 st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 데이터로 옮겨적었음")
-st.divdier()
+st.divider()
 st.header("손글씨 데이터를 텍스트 데이터로 변환시 규칙")
 st.markdown(r''' 1. $x \times y$ $\Rightarrow$ x \times y''')
 st.markdown('2. $x \div y$ $\Rightarrow$ x \div y')
 st.markdown(r'''3. $\frac{a}{b}$ $\Rightarrow$ a/b''')
-st.divdier()
+st.divider()
 
 st.header("데이터 예시")
 st.write("데이터를 csv파일로 옮긴 예시")
