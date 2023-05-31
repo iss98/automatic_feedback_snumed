@@ -1,6 +1,10 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 st.title("데이터 전처리 과정")
+st.divdier()
 st.header("OCR 이용 과정에서의 문제점")
 st.write("OCR 프로그램인 [mathpix](https://mathpix.com/)를 이용하여 학생들의 손글씨 응답을 LaTeX 언어로 변환하고자 하였음")
 st.write("하지만 실험적으로 돌렸던 OCR 결과와 달리 학생들의 글씨, 응답을 작성하는 구역 등의 문제로 OCR이 제대로 진행되지 않음")
@@ -106,8 +110,28 @@ code2 = '''\begin{document}
 \end{center}'''
 st.code(code2, language = 'latex')
 st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 데이터로 옮겨적었음")
-
+st.divdier()
 st.header("손글씨 데이터를 텍스트 데이터로 변환시 규칙")
 st.markdown(r''' 1. $x \times y$ $\Rightarrow$ x \times y''')
 st.markdown('2. $x \div y$ $\Rightarrow$ x \div y')
 st.markdown(r'''3. $\frac{a}{b}$ $\Rightarrow$ a/b''')
+st.divdier()
+
+st.header("데이터 예시")
+st.write("데이터를 csv파일로 옮긴 예시")
+df = pd.read_csv("3-3.csv")
+df = df.dropna(subset = ["답안"])
+num_rows = len(df)
+st.write(f"응답을 한 학생 수 : {num_rows}, 총 학생 수 : 241")
+st.dataframe(df)
+
+column_distributions = {}
+for column in df.columns:
+    column_distributions[column] = df[column].values
+
+st.set_option('deprecation.showPyplotGlobalUse', False) 
+
+for column, values in column_distributions.items():
+    st.subheader(f'Column: {column}')
+    plt.hist(values, bins='auto')
+    st.pyplot()
