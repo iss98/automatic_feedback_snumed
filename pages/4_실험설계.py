@@ -15,7 +15,13 @@ data1 = {'1-1': [1,2],
         '1-8': [5,4]}
 df1 = pd.DataFrame(data1)
 df1.index = ["지식요소", "오개념"]
-st.table(df1.style.set_properties(**{'text-align': 'center', 'font-weight': 'bold'}))
+styled_df1 = df1.style\
+    .set_properties(**{'text-align': 'center', 'font-weight': 'bold'})\
+    .set_table_styles([{'selector': 'th',
+                        'props': [('text-align', 'center'),
+                                  ('font-weight', 'bold'),
+                                  ('background-color', 'blue')]}])
+st.table(styled_df1)
 st.subheader("2")
 data2 = {'2-1': [1,2],
         '2-2': [1,2],
