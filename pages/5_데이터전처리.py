@@ -137,9 +137,8 @@ for column, values in column_distributions.items():
     percentages = counts / sum(counts) * 100
     plt.clf()
     plt.bar(bins[:-1], percentages, width=np.diff(bins), align='edge', color='#4287f5', alpha=0.8)
-    plt.xlabel(column)
     plt.ylabel('Percentage')
-    plt.title(f'{column} Distribution')
+    plt.title('Distribution')
     plt.grid(axis='y', linestyle='--', alpha=0.5)
     plt.xticks(fontsize=8)
     plt.yticks(fontsize=8)
