@@ -126,12 +126,21 @@ st.write(f"응답을 한 학생 수 : {num_rows}, 총 학생 수 : 241")
 st.dataframe(df)
 
 column_distributions = {}
-for column in df.columns:
+for column in df.columns[2:]:
     column_distributions[column] = df[column].values
 
 st.set_option('deprecation.showPyplotGlobalUse', False) 
 
 for column, values in column_distributions.items():
     st.subheader(f'Column: {column}')
-    plt.hist(values, bins='auto')
+    counts, bins, _ = plt.hist(values, bins='auto', edgecolor='black', linewidth=1.2, color='#4287f5', alpha=0.8)
+    percentages = counts / sum(counts) * 100
+    plt.clf()
+    plt.bar(bins[:-1], percentages, width=np.diff(bins), align='edge', color='#4287f5', alpha=0.8)
+    plt.xlabel(column)
+    plt.ylabel('Percentage')
+    plt.title(f'{column} Distribution')
+    plt.grid(axis='y', linestyle='--', alpha=0.5)
+    plt.xticks(fontsize=8)
+    plt.yticks(fontsize=8)
     st.pyplot()
