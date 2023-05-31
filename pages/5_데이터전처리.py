@@ -2,7 +2,8 @@ import streamlit as st
 
 st.title("데이터 전처리 과정")
 st.header("OCR 이용 과정에서의 문제점")
-st.write("OCR 프로그램인 [mathpix](https://mathpix.com/)를 이용하여 학생들의 손글씨 응답을 LaTeX 언어로 변환하고자 하였음 \n . 하지만 실험적으로 돌렸던 OCR 결과와 달리 학생들의 글씨, 응답을 작성하는 구역 등의 문제로 OCR이 제대로 진행되지 않음")
+st.write("OCR 프로그램인 [mathpix](https://mathpix.com/)를 이용하여 학생들의 손글씨 응답을 LaTeX 언어로 변환하고자 하였음")
+st.write("하지만 실험적으로 돌렸던 OCR 결과와 달리 학생들의 글씨, 응답을 작성하는 구역 등의 문제로 OCR이 제대로 진행되지 않음")
 st.subheader("OCR이 잘된 예시")
 code1 = '''\begin{document}
 \begin{center}
@@ -104,3 +105,11 @@ code2 = '''\begin{document}
 \includegraphics[max width=\textwidth]{2023_04_26_2b23690b9474cb154cf5g-2}
 \end{center}'''
 st.code(code2, language = 'latex')
+st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 데이터로 옮겨적었음")
+
+st.header("손글씨 데이터를 텍스트 데이터로 변환시 규칙")
+st.latex(r'''
+1. $x \times y$ $\Rightarrow$ x \times y
+2. $x \div y$ $\Rightarrow$ x \div y
+3. $\frac{a}{b}$ $\Rightarrow$ a/b
+''')
