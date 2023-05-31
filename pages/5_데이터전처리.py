@@ -110,4 +110,4 @@ st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 �
 st.header("손글씨 데이터를 텍스트 데이터로 변환시 규칙")
 st.markdown(r''' 1. $x \times y$ $\Rightarrow$ x \times y''')
 st.markdown('2. $x \div y$ $\Rightarrow$ x \div y')
-st.markdwon(r'''3. $\frac{a}{b}$ $\Rightarrow$ a/b''')
+st.markdown(r'''3. $\frac{a}{b}$ $\Rightarrow$ a/b''')
