@@ -15,7 +15,7 @@ data1 = {'1-1': [1,2],
         '1-8': [5,4]}
 df1 = pd.DataFrame(data1)
 df1.index = ["지식요소", "오개념"]
-st.table(df1)
+st.table(df1.style.set_table_styles([{'selector': 'th', 'props': [('background-color', 'lightblue')]}]))
 st.subheader("2")
 data2 = {'2-1': [1,2],
         '2-2': [1,2],
@@ -28,14 +28,14 @@ data2 = {'2-1': [1,2],
         '2-9': [4,3]}
 df2 = pd.DataFrame(data2)
 df2.index = ["지식요소", "오개념"]
-st.table(df2)
+st.table(df2.style.set_table_styles([{'selector': 'th', 'props': [('background-color', 'lightblue')]}]))
 st.subheader("3")
 data3 = {'3-1': [1,1],
         '3-2': [1,1],
         '3-3': [5,1]}
 df3 = pd.DataFrame(data3)
 df3.index = ["지식요소", "오개념"]
-st.table(df3)
+st.table(df3.style.set_table_styles([{'selector': 'th', 'props': [('background-color', 'lightblue')]}]))
 st.header("실험 설계")
 st.write("**대상 학년** : 중학교 2학년")
 st.write("**대상 학생** : 2개 학교 241명의 학생")
