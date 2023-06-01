@@ -9,15 +9,12 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.image('images/1_1_acc.jpg', use_column_width=True, caption = "Accuracy")
-    st.image('images/1_4_1_7_acc.jpg', use_column_width=True, caption = "Accuracy")
 
 with col2:
     st.image('images/1_1_loss.jpg', use_column_width=True, caption = "loss")
-    st.image('images/1_4_1_7_loss.jpg', use_column_width=True, caption = "loss")
 
 with col3:
     st.image('images/1_1_testacc.jpg', use_column_width=True, caption = "Test Accuracy")
-    st.image('images/1_4_1_7_testacc.jpg', use_column_width=True, caption = "Test Accuracy")
 markdown_table1 = """
 |  | **1-1** | **1-2** | **1-3** | **1-4** | **1-5** | **1-6** | **1-7** | **1-8** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -33,15 +30,11 @@ col4, col5, col6 = st.columns(3)
 
 with col4:
     st.image('images/1_2_acc.png', use_column_width=True, caption = "Accuracy")
-    st.image('images/2_1_2_6_acc.png', use_column_width=True, caption = "Accuracy")
 
 with col5:
     st.image('images/1_2_loss.png', use_column_width=True, caption = "loss")
-    st.image('images/2_1_2_6_loss.png', use_column_width=True, caption = "loss")
-
 with col6:
     st.image('images/1_2_testacc.png', use_column_width=True, caption = "Test Accuracy")
-    st.image('images/2_1_2_6_testacc.png', use_column_width=True, caption = "Test Accuracy")
 markdown_table2 = """
 |  | **2-1** | **2-2** | **2-3** | **2-4** | **2-5** | **2-6** | **2-7** | **2-8** | **2-9**|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
