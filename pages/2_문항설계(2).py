@@ -8,28 +8,33 @@ st.write(r"**문제** : $(2^4)^x \times (2^3)^x = 2^3 \times 2^{3x}$")
 st.write("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식의 풀이")
 latex_equation1 = r"""
 \text{모범답안1} \\
+\\
 \begin{equation*}
 \begin{split}
-    2^{4x} \times 2^{2x} & = 2^3 \times 2^{3x} ~ \text{거듭제곱의 거듭제곱} \\
-    2^{6x} & = 2^{3+3x} ~ \text{거듭제곱의 곱셈} \\
-    6x & = 3+3x ~ \text{일차방정식의 풀이} \\
+    2^{4x} \times 2^{2x} & = 2^3 \times 2^{3x} ~ \cdot \text{거듭제곱의 거듭제곱} \\
+    2^{6x} & = 2^{3+3x} ~ \cdot \text{거듭제곱의 곱셈} \\
+    6x & = 3+3x ~ \cdot \text{일차방정식의 풀이} \\
     x & = 1 \\
 \end{split}
 \end{equation*}
+\\
 \\
 \text{모범답안2} \\
+\\
 \begin{equation*}
 \begin{split}
-    2^{6x} & = 2^{3+3x} ~ \text{거듭제곱의 거듭제곱, 거듭제곱의 곱셈} \\
-    6x & = 3+3x ~ \text{일차방정식의 풀이} \\
+    2^{6x} & = 2^{3+3x} ~ \cdot \text{거듭제곱의 거듭제곱, 거듭제곱의 곱셈} \\
+    6x & = 3+3x ~ \cdot \text{일차방정식의 풀이} \\
     x & = 1 \\
 \end{split}
 \end{equation*}
 \\
+\\
 \text{모범답안3} \\
+\\
 \begin{equation*}
 \begin{split}
-    2^{6x} & = 2^{3+3x} ~ \text{거듭제곱의 거듭제곱, 거듭제곱의 곱셈} \\
+    2^{6x} & = 2^{3+3x} ~ \cdot \text{거듭제곱의 거듭제곱, 거듭제곱의 곱셈} \\
     x & = 1 \\
 \end{split}
 \end{equation*}
