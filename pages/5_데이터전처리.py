@@ -89,17 +89,41 @@ for column in df.columns[2:]:
 
 st.set_option('deprecation.showPyplotGlobalUse', False) 
 
-for column, values in column_distributions.items():
-    st.subheader(f'Column: {column}')
-    counts, bins, _ = plt.hist(values, bins='auto', edgecolor='black', linewidth=1.2, color='#4287f5', alpha=0.8)
-    percentages = counts / sum(counts) * 100
-    plt.clf()
-    plt.bar(bins[:-1], percentages, width=np.diff(bins), align='edge', color='#4287f5', alpha=0.8)
-    plt.ylabel('Percentage')
-    plt.title('Distribution')
-    plt.grid(axis='y', linestyle='--', alpha=0.5)
-    plt.xticks(fontsize=8)
-    plt.yticks(fontsize=8)
-    st.pyplot()
+col1, col2 = st.columns(2)
+
+col_list = list(column_distributions.keys())
+slice_ind = len(col_list)//2
+
+with col1:
+    for column in col_list[:slice_ind]:
+        values = column_distributions[column]
+        st.subheader(f'Column: {column}')
+        counts, bins, _ = plt.hist(values, bins='auto', edgecolor='black', linewidth=1.2, color='#4287f5', alpha=0.8)
+        percentages = counts / sum(counts) * 100
+        plt.clf()
+        plt.bar(bins[:-1], percentages, width=np.diff(bins), align='edge', color='#4287f5', alpha=0.8)
+        plt.ylabel('Percentage')
+        plt.title('Distribution')
+        plt.grid(axis='y', linestyle='--', alpha=0.5)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
+        st.pyplot()
+
+with col2:
+    for column in col_list[slice_ind:]:
+        values = column_distributions[column]
+        st.subheader(f'Column: {column}')
+        counts, bins, _ = plt.hist(values, bins='auto', edgecolor='black', linewidth=1.2, color='#4287f5', alpha=0.8)
+        percentages = counts / sum(counts) * 100
+        plt.clf()
+        plt.bar(bins[:-1], percentages, width=np.diff(bins), align='edge', color='#4287f5', alpha=0.8)
+        plt.ylabel('Percentage')
+        plt.title('Distribution')
+        plt.grid(axis='y', linestyle='--', alpha=0.5)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
+        st.pyplot()
+
+
 
 st.write("데이터의 분포 관련 설명 추가")
