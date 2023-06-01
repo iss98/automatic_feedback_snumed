@@ -5,7 +5,7 @@ st.title("대표 문항 설계")
 st.divider()
 st.header("1-7")
 st.write(r"**문제** : $(2^4)^x \times (2^3)^x = 2^3 \times 2^{3x}$")
-st.wirte("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식의 풀이")
+st.write("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식의 풀이")
 latex_equation1 = r"""
 **모범답안1**
 \begin{equation}
