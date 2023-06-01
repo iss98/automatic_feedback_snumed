@@ -112,7 +112,22 @@ markdown_table6 = """
 st.markdown(markdown_table6, unsafe_allow_html=True)
 st.write("결과 정리")
 
+st.divider()
 st.header("3. 정오답 채점 모델")
-st.subheader("파트1")
-st.subheader("파트2")
-st.subheader("파트3")
+
+col13, col14, col15 = st.columns(3)
+with col13 :
+    st.image('images/all_acc.png', use_column_width=True, caption = "Accuracy")
+with col14 :
+    st.image('images/all_loss.png', use_column_width=True, caption = "loss")
+with col15 : 
+    st.image('images/all_testacc.png', use_column_width=True, caption = "Test Accuracy")
+markdown_table7 = """
+|  | ALL |
+| --- | --- |
+| RNN | 0.958 | 
+| LSTM | 0.840 |  
+| Attention | 0.856 |
+"""
+st.markdown(markdown_table7, unsafe_allow_html=True)
+st.write("결과 정리")
