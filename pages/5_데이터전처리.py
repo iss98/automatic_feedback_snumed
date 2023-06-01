@@ -146,3 +146,5 @@ for column, values in column_distributions.items():
     plt.xticks(fontsize=8)
     plt.yticks(fontsize=8)
     st.pyplot()
+
+st.write("데이터의 분포 관련 설명 추가")
