@@ -43,7 +43,7 @@ xol $x+4-c y<2) 23-(847$
 
 (10) $\frac{5 x+2}{6}=\frac{x+10}{3}-2 \not c=-1$
 '''
-st.image("../iamges/OCRexample1.png", caption="OCR이 잘 된 예시")
+st.image("./iamges/OCRexample1.png", caption="OCR이 잘 된 예시")
 st.code(code1, language = 'latex')
 
 st.subheader("OCR이 잘 안된 예시")
@@ -61,7 +61,7 @@ code2 = '''\begin{document}
 \begin{center}
 \includegraphics[max width=\textwidth]{2023_04_26_2b23690b9474cb154cf5g-2}
 \end{center}'''
-st.image("../iamges/OCRexample2.png", caption="OCR이 잘 안된 예시")
+st.image("./iamges/OCRexample2.png", caption="OCR이 잘 안된 예시")
 st.code(code2, language = 'latex')
 st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 데이터로 옮겨적었음")
 st.divider()
