@@ -123,11 +123,11 @@ with col14 :
 with col15 : 
     st.image('images/all_tesetacc.png', use_column_width=True, caption = "Test Accuracy")
 markdown_table7 = """
-|  | ALL |
+|  | **ALL** |
 | --- | --- |
-| RNN | 0.958 | 
-| LSTM | 0.840 |  
-| Attention | 0.856 |
+| **RNN** | **0.958** | 
+| **LSTM** | 0.840 |  
+| **Attention** | 0.856 |
 """
 st.markdown(markdown_table7, unsafe_allow_html=True)
 st.write("결과 정리")
