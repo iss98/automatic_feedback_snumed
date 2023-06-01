@@ -121,7 +121,7 @@ with col13 :
 with col14 :
     st.image('images/all_loss.png', use_column_width=True, caption = "loss")
 with col15 : 
-    st.image('images/all_teseacc.png', use_column_width=True, caption = "Test Accuracy")
+    st.image('images/all_tesetacc.png', use_column_width=True, caption = "Test Accuracy")
 markdown_table7 = """
 |  | ALL |
 | --- | --- |
