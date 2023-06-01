@@ -16,7 +16,7 @@ latex_equation1 = r"""
     x & = 1 \\
 \end{split}
 \end{equation*}
-
+\\
 \text{모범답안2} \\
 \begin{equation*}
 \begin{split}
@@ -25,7 +25,7 @@ latex_equation1 = r"""
     x & = 1 \\
 \end{split}
 \end{equation*}
-
+\\
 \text{모범답안3} \\
 \begin{equation*}
 \begin{split}
