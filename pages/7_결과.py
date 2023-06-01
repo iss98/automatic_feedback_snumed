@@ -25,7 +25,7 @@ markdown_table1 = """
 | LSTM | |  | | | | | | |
 | Attention | | | | | | | | |
 """
-st.markdwon(markdown_table1, unsave_allow_html=True)
+st.markdown(markdown_table1, unsave_allow_html=True)
 st.write("결과 정리")
 
 st.subheader("파트2")
@@ -49,7 +49,7 @@ markdown_table2 = """
 | LSTM | |  | | | | | | | |
 | Attention | | | | | | | | | |
 """
-st.markdwon(markdown_table2, unsave_allow_html=True)
+st.markdown(markdown_table2, unsave_allow_html=True)
 st.write("결과 정리")
 st.subheader("파트3")
 col7, col8, col9 = st.columns(3)
@@ -67,7 +67,7 @@ markdown_table3 = """
 | LSTM | |  | |
 | Attention | | | |
 """
-st.markdwon(markdown_table3, unsave_allow_html=True)
+st.markdown(markdown_table3, unsave_allow_html=True)
 st.write("결과 정리")    
 st.divider()
 st.header("2. 오개념 모델")
