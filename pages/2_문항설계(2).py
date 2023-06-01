@@ -14,8 +14,9 @@ latex_equation1 = r"""
     2^{6x} & = 2^{3+3x} ~ \text{거듭제곱의 곱셈} \\
     6x & = 3+3x ~ \text{일차방정식의 풀이} \\
     x & = 1 \\
-\end{equation*}
 \end{split}
+\end{equation*}
+
 \text{모범답안2} \\
 \begin{equation*}
 \begin{split}
@@ -24,6 +25,7 @@ latex_equation1 = r"""
     x & = 1 \\
 \end{split}
 \end{equation*}
+
 \text{모범답안3} \\
 \begin{equation*}
 \begin{split}
