@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(layout="wide")
 st.title("모델")
 st.divider()
 st.header("1. 지식요소 모델")
@@ -21,6 +22,7 @@ st.header("모델의 layer와 hyperparameter")
 st.write("Layer : RNN, LSTM, MultiheadAttention")
 st.write("Tokenizer : Sentencepiece(sp), Bertwordpiecetokenizer(bw)")
 st.write("Max len : 100")
+st.write("Vocab size : 문제의 길이에 따라 60개부터 140개까지 다양하게 사용")
 st.write("Embedding dimensioin : 100")
 st.write("Hidden dimensioin : 100")
 st.write("Optimizer : Adam")

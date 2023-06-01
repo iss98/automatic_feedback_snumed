@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout="wide")
 st.title("실험 설계")
 st.divider()
 st.header("문항 설계 정리")
