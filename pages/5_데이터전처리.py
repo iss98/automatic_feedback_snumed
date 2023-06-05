@@ -4,11 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide")
-st.title("데이터 전처리 과정")
+st.title(":robot_face: 데이터 전처리 과정")
 st.divider()
-st.header("OCR 이용 과정에서의 문제점")
+st.header(":robot_face: OCR 이용 과정에서의 문제점")
 st.write("OCR 프로그램인 [mathpix](https://mathpix.com/)를 이용하여 학생들의 손글씨 응답을 LaTeX 언어로 변환하고자 하였음")
-st.write("하지만 실험적으로 돌렸던 OCR 결과와 달리 학생들의 글씨, 응답을 작성하는 구역 등의 문제로 OCR이 제대로 진행되지 않음")
+st.write("하지만 실험으로 돌렸던 OCR 결과와 달리 학생들의 글씨, 응답을 작성하는 구역 등의 문제로 OCR이 제대로 진행되지 않음")
 st.subheader("OCR이 잘된 예시")
 code1 = '''
 등식의 성질 : 두 식 $A, B$ 가 서로 같을 때 즉 $A=B$ 일 때, 수 C에 대하여
@@ -65,14 +65,18 @@ code2 = '''\begin{document}
 st.image("images/OCRexample2.jpg", caption="OCR이 잘 안된 예시")
 st.code(code2, language = 'latex')
 st.write("손글씨를 OCR 변환하지 않고, 직접 csv 파일에 텍스트 데이터로 옮겨적었음")
+st.write(":heavy_exclamation_mark: 후속 연구에서는 데이터를 손글씨가 아닌 텍스트로 수집하거나, OCR 프로그램이 정상 작동하는 형식을 미리 준비하고 충분한 사전 테스트를 거칠 필요가 있음")
 st.divider()
-st.header("손글씨 데이터를 텍스트 데이터로 변환시 규칙")
+st.header(":robot_face: 손글씨 데이터를 텍스트 데이터로 변환시 규칙")
+st.write("대부분의 선행연구에서 수학 텍스트를 분석할 때 latex 기반의 문법을 활용함. 손글씨 데이터를 텍스트 데이터로 옮기는 과정에서 latex 문법을 사용하였음.")
+st.write("또한, 텍스트 데이터로 옮기는 과정에서 정오답, 지식 요소, 오개념은 답안별로 직접 채점하여 0, 1로 입력하였음")
 st.markdown(r''' 1. $x \times y$ $\Rightarrow$ x \times y''')
 st.markdown('2. $x \div y$ $\Rightarrow$ x \div y')
 st.markdown(r'''3. $\frac{a}{b}$ $\Rightarrow$ a/b''')
 st.divider()
 
-st.header("데이터 예시")
+
+st.header(":robot_face: 데이터 예시")
 st.write("데이터를 csv파일로 옮긴 예시")
 option = st.selectbox(
     '문제 번호를 골라주세요',
@@ -124,6 +128,9 @@ with col2:
         plt.yticks(fontsize=8)
         st.pyplot()
 
-
-
-st.write("데이터의 분포 관련 설명 추가")
+st.subheader("데이터 분포의 특징")
+st.write(":one: 문항 설계의 단계에서 고려한 여러 가지의 풀이 중 학생들이 특정 풀이를 선호하는 경향성이 보임")
+st.write("3-3의 경우 (다항식)X(단항식)을 사용해 문제를 푼 학생들이 (다항식)$\div$(단항식)를 사용해 푼 학생들보다 훨씬 많았음")
+st.write(":two: 대부분의 데이터들이 편향되게 분포하였음")
+st.write("3-1 ~ 3-3 문항의 경우 문제를 푼 학생들의 정답률이 90%였음. 모델이 1로만 응답을 해도 정답률이 90%가 나오는 상황")
+st.write("또한, 오개념을 보인 학생의 수가 많지 않았음")

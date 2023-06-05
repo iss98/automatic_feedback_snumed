@@ -2,64 +2,21 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(layout="wide")
-st.title("실험 설계")
+st.title(":test_tube: 실험 설계")
 st.divider()
-st.header("문항 설계 정리")
-st.write("각 문항에 들어간 지식요소 및 오개념의 개수를 정리하면 다음과 같다.")
-st.subheader("1")
-data1 = {'1-1': [1,2],
-        '1-2': [2,1],
-        '1-3': [1,2],
-        '1-4': [2,3],
-        '1-5': [2,2],
-        '1-6': [1,3],
-        '1-7': [3,4],
-        '1-8': [5,4]}
-df1 = pd.DataFrame(data1)
-df1.index = ["지식요소", "오개념"]
-styled_df1 = df1.style\
-    .set_properties(**{'text-align': 'center', 'font-weight': 'bold'})\
-    .set_table_styles([{'selector': 'th',
-                        'props': [('text-align', 'center'),
-                                  ('font-weight', 'bold'),
-                                  ('background-color', 'lightblue')]}])
-st.table(styled_df1)
-st.subheader("2")
-data2 = {'2-1': [1,2],
-        '2-2': [1,2],
-        '2-3': [1,2],
-        '2-4': [1,2],
-        '2-5': [2,3],
-        '2-6': [5,4],
-        '2-7': [4,2],
-        '2-8': [6,1],
-        '2-9': [4,3]}
-df2 = pd.DataFrame(data2)
-df2.index = ["지식요소", "오개념"]
-styled_df2 = df2.style\
-    .set_properties(**{'text-align': 'center', 'font-weight': 'bold'})\
-    .set_table_styles([{'selector': 'th',
-                        'props': [('text-align', 'center'),
-                                  ('font-weight', 'bold'),
-                                  ('background-color', 'lightblue')]}])
-st.table(styled_df2)
-st.subheader("3")
-data3 = {'3-1': [1,1],
-        '3-2': [1,1],
-        '3-3': [5,1]}
-df3 = pd.DataFrame(data3)
-df3.index = ["지식요소", "오개념"]
-styled_df3 = df3.style\
-    .set_properties(**{'text-align': 'center', 'font-weight': 'bold'})\
-    .set_table_styles([{'selector': 'th',
-                        'props': [('text-align', 'center'),
-                                  ('font-weight', 'bold'),
-                                  ('background-color', 'lightblue')]}])
-st.table(styled_df3)
 
-st.divider()
-st.header("실험 설계")
+st.header(":test_tube: 실험 설계")
 st.write("**대상 학년** : 중학교 2학년")
-st.write("**대상 학생** : 2개 학교 241명의 학생")
-st.write("**문제 풀이 시간** : 1시간")
-st.write("**실험 진행 과정** : 데이터 수집 :point_right: 데이터 전처리 :point_right: 자동채점모델 생성 :point_right: 피드백 방안 만들기")
+st.write("**대상 학생** : 2개교 학생(241명)")
+st.write("**단원** : 중학교 2-1 식의 계산")
+st.write("**문제 풀이 시간** : 40분")
+st.write("**데이터 형태** : 디벗(갤럭시 탭)을 사용하여 준비된 답안지 pdf 양식에 답안을 작성")
+st.write("**실험 진행 과정** : ")
+st.write("**단원 및 대상 선정** :")
+st.write(":point_right: 지식맵 작성") 
+st.write(":point_right: 문항 설계")
+st.write(":point_right: 루브릭 작성 (예상 답안, 답안 요소별 지식요소, 오개념)")
+st.write(":point_right: 데이터 수집")
+st.write(":point_right: 데이터 전처리") 
+st.write(":point_right: 자동채점 모델 생성") 
+st.write(":point_right: 피드백 방안 만들기")
