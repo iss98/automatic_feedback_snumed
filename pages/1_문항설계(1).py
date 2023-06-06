@@ -23,3 +23,4 @@ st.markdown("- 총 세 부분으로 분류 \n\n   - Part1: 거듭제곱의 곱�
 
 st.divider()
 st.header("📚식의 계산 단원 내 지식맵 구성")
+st.image("images/all.png")

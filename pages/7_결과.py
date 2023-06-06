@@ -69,7 +69,7 @@ markdown_table3 = """
 |  | **3-1** | **3-2** | **3-3** |
 | --- | --- | --- | --- |
 | RNN | 0.948 | 0.958 | **0.895** |
-| LSTM | *1.000* | 0.969 | 0.854 |
+| LSTM | **1.000** | **0.969** | 0.854 |
 | Attention | 0.938 | 0.875 | 0.860 |
 """
 st.write(":star: Accuracy table")
@@ -77,7 +77,7 @@ st.markdown(markdown_table3, unsafe_allow_html=True)
 st.write("")
 st.write("**결과 정리**")
 st.write(":one: 3-1과 같이 답안이 간단한 문항의 경우 1에 가까운 accuracy를 보이기도 했지만, 답안이 가장 복잡한 1-8과 같은 경우는 0.7 정도의 accuracy를 나타냄")
-st.write(":two: 최적 모델는 문항마다 상이하며, 전체적으로 유의미한 정도의 차이를 나타내지는 않음")      
+st.write(":two: 최적 모델은 문항마다 상이하며, 전체적으로 유의미한 정도의 차이를 나타내지는 않음")      
 st.divider()
 st.header(":two: 오개념 모델")
 
@@ -127,7 +127,7 @@ st.markdown(markdown_table6, unsafe_allow_html=True)
 st.write("")
 st.write("**결과 정리**")
 st.write(":one: 오개념의 경우 지식요소보다 label의 개수가 적어 비교적 높은 accuracy를 보임(분포와도 연관이 있을 것으로 보임)")
-st.write(":two: 최적 모델는 문항마다 상이하며, 전체적으로 유의미한 정도의 차이를 나타내지는 않음")         
+st.write(":two: 최적 모델은 문항마다 상이하며, 전체적으로 유의미한 정도의 차이를 나타내지는 않음")         
 
 st.divider()
 st.header(":three: 정오답 채점 모델")
