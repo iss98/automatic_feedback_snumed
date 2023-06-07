@@ -3,6 +3,7 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 st.header(":female-teacher: 문항 루브릭")
+st.divider()
 st.subheader("Part 1 거듭제곱")
 st.image('images/part1_rubric.png', use_column_width=True, caption = "part1_rubric")
 st.subheader("Part 2 단항식의 곱셈과 나눗셈, 다항식의 덧셈과 뺄셈")
