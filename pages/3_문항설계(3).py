@@ -15,7 +15,7 @@ st.divider()
 st.header(":female-teacher: 문항 설계 정리")
 st.write("각 문항에 들어간 지식요소 및 오개념의 개수를 정리하면 다음과 같음")
 st.write("각 문항에 최소한 1개의 지식요소와 오개념이 들어가도록 설계함")
-st.subheader("1")
+st.subheader("Part 1")
 data1 = {'1-1': [1,2],
         '1-2': [2,1],
         '1-3': [1,2],
@@ -33,7 +33,7 @@ styled_df1 = df1.style\
                                   ('font-weight', 'bold'),
                                   ('background-color', 'lightblue')]}])
 st.table(styled_df1)
-st.subheader("2")
+st.subheader("Part 2")
 data2 = {'2-1': [1,2],
         '2-2': [1,2],
         '2-3': [1,2],
@@ -52,7 +52,7 @@ styled_df2 = df2.style\
                                   ('font-weight', 'bold'),
                                   ('background-color', 'lightblue')]}])
 st.table(styled_df2)
-st.subheader("3")
+st.subheader("Part 3")
 data3 = {'3-1': [1,1],
         '3-2': [1,1],
         '3-3': [5,1]}
