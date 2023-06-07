@@ -3,9 +3,6 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 st.title(":test_tube: 실험 설계")
-st.divider()
-
-st.header(":test_tube: 실험 설계")
 st.write("**대상 학년** : 중학교 2학년")
 st.write("**대상 학생** : 2개교 학생(241명)")
 st.write("**단원** : 중학교 2-1 식의 계산")
