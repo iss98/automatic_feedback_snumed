@@ -12,5 +12,5 @@ st.write(":point_right: 같은 공란이더라도 학생이 답안을 작성하�
 st.write(":point_right: 교사의 판단과 분석이 중요할 것으로 보임")
 st.divider()
 st.write(":three: 실제 교육현장에서의 적용을 고려한다면 cold start problem을 고민해야할 것으로 보임")
-st.write(":point_right: 거대 언어 모델 사용?"
+st.write(":point_right: 거대 언어 모델 사용?")
 st.divider()
